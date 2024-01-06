@@ -10,3 +10,8 @@ def single_letter_count(word, letter):
         >>> single_letter_count("Hello World", 'l')
         3
     """
+
+    lowerCasedWord = word.lower();
+    lowerCasedLetter = letter.lower();
+
+    return lowerCasedWord.count(lowerCasedLetter) if lowerCasedWord.count(lowerCasedLetter) > 0 else 0

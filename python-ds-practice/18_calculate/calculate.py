@@ -26,3 +26,29 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+
+    operations_list = ['add', 'subtract', 'multiply', 'divide'];
+    result = 0;
+
+    try:
+        if(operations_list.index(operation) != ValueError):
+            if(operation == 'add'):
+                result += a + b;
+
+            if(operation == 'subtract'):
+                result += a - b;
+
+            if(operation == 'multiply'):
+                result += a * b;
+
+            if(operation == 'divide'):
+                result += a / b;
+
+            if(make_int):
+                result = int(result);
+            
+            return (f"{message} {result}")
+        
+    except:
+        return None;
+    
